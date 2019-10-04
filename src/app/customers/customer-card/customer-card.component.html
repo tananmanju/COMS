@@ -1,0 +1,9 @@
+<section role="main">
+  <h1>{{title}}</h1>
+  <ul class="container">
+    <li *ngFor="let customer of customers" class="card">
+      <customer-card-item [customer]="customer"></customer-card-item>
+      
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,16 @@
+<h2 class="heading">{{customer.firstName}}{{customer.lastName}}
+    <span><i aria-hidden="true" class="fa fa-pencil-square-o icon"></i></span>
+</h2>
+<div class="flex-grid">
+    <figure class="card-image">
+        <img *ngIf="customer.gender === 'male'" src="../../../../assets/images/profileimage.jpg" height=100 width=100>
+        <img *ngIf="customer.gender === 'female'"src="../../../../assets/images/female.png" height=100 width=100>
+    </figure>
+    <section>
+        <address class="address font-size">
+            <strong>{{customer.address.city}}</strong><br/>
+            <strong>{{customer.address.street}}</strong>
+        </address>
+        <a class="view-order" href="#">View Orders</a>
+    </section>
+</div>
