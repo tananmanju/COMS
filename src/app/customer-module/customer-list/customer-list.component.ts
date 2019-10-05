@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../models/customer.model';
+import { Customer } from '../models/customer';
 import { CustomerService } from '../services/customer.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CustomerService } from '../services/customer.service';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-  title:string = "Customer Data in list Format";
+  
   customers:Customer[];
 
   constructor(private customerService:CustomerService) { 

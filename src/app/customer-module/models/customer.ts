@@ -1,5 +1,5 @@
 //model representing customer entity
-import {Address} from './address.model';
+import {Address} from './address';
 
 export class Customer {
     constructor(

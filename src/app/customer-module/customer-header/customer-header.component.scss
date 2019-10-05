@@ -2,18 +2,18 @@
   padding: 0;
   margin: 0;
 }
-.main__header {
+.top__header {
   width: 90%;
   margin: 0 auto;
   font-family: sans-serif;
 }
-section__first{
-  margin-top:25px;
+.section__first {
+  margin-top: 25px;
 }
 .h2__heading {
   font-size: 25px;
 }
-.user__icon--width {
+.user__icon--img {
   width: 30px;
   height: 30px;
   margin-top: 6px;
@@ -25,14 +25,14 @@ section__first{
 .navbar__nav {
   display: inline-flex;
 }
-.navbar__nav li {
+.navbar__item {
   margin: 0px 0px;
   list-style: none;
 }
-a.active {
-  color: #333!important;
+.navbar__item--title {
+  color: #333 !important;
 }
-.navbar__nav li a {
+.navbar__item--title {
   float: left;
   padding: 12px;
   text-decoration: none;
@@ -46,10 +46,10 @@ a.active {
 .navbar__right {
   float: right;
 }
-.navbar__right li {
+.customer__filter {
   display: grid;
 }
-input[type=text] {
+.customer__list--filter {
   border: 2px solid #eee;
   padding: 7px 18px;
   margin: 8px 0;

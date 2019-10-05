@@ -1,16 +1,17 @@
 [
   {
-    "id": 1000,
+    "id": 1001,
     "firstName": "Puja",
     "lastName": "Gope",
     "email": "Pujarani@gmail.com",
     "phone": "7838239489",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt. 557",
+      "houseNo": "Apt. 557",
       "street": "Patel Nagar",
       "society": "Rawilay Vihar",
       "city": "Gurgaon",
+      "state": "Haryana",
       "country": "India"
     }
   },
@@ -20,12 +21,13 @@
     "lastName": "Sinha",
     "email": "priyasinha@gmail.com",
     "phone": "7638239485",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt.441",
+      "houseNo": "Apt.441",
       "street": "Tarapur",
       "society": "Palam Vihar",
       "city": "Munger",
+      "state": "Bihar",
       "country": "India"
     }
   },
@@ -35,12 +37,13 @@
     "lastName": "Sinha",
     "email": "shubamsinha@gmail.com",
     "phone": "9838239467",
-    "gender": "male",
+    "gender": "M",
     "address": {
-      "houseNumber": "Apt.120",
+      "houseNo": "Apt.120",
       "street": "Kulas Light",
       "society": "Udyog Vihar",
       "city": "Patna",
+      "state": "Bihar",
       "country": "India"
     }
   },
@@ -50,12 +53,13 @@
     "lastName": "Sinha",
     "email": "preeti12@gmail.com",
     "phone": "9438239485",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt.340",
+      "houseNo": "Apt.340",
       "street": "MohanGanj",
       "society": "Mohan Vihar",
       "city": "Patna",
+      "state": "Bihar",
       "country": "India"
     }
   },
@@ -65,12 +69,13 @@
     "lastName": "singh",
     "email": "rahulsingh@gmail.com",
     "phone": "0838239485",
-    "gender": "male",
+    "gender": "M",
     "address": {
-      "houseNumber": "Apt.989",
+      "houseNo": "Apt.989",
       "street": "kali Mandir",
       "society": "Nirman Vihar",
       "city": "Delhi",
+      "state": "Delhi",
       "country": "India"
     }
   },
@@ -80,12 +85,13 @@
     "lastName": "singh",
     "email": "ravisingh@gmail.com",
     "phone": "9538239485",
-    "gender": "male",
+    "gender": "M",
     "address": {
-      "houseNumber": "Apt.390",
+      "houseNo": "Apt.390",
       "street": "Ashok Nagar",
       "society": "Ashok Vihar",
       "city": "Delhi",
+      "state": "Delhi",
       "country": "India"
     }
   },
@@ -95,12 +101,13 @@
     "lastName": "Mishra",
     "email": "pankajmishra@gmail.com",
     "phone": "08938239485",
-    "gender": "male",
+    "gender": "M",
     "address": {
-      "houseNumber": "Apt.189",
+      "houseNo": "Apt.189",
       "street": "sai Nagar",
       "society": "Sarada Vihar",
       "city": "Gurgaon",
+      "state": "Haryana",
       "country": "India"
     }
   },
@@ -110,12 +117,13 @@
     "lastName": "singh",
     "email": "rekhasingh@gmail.com",
     "phone": "9038239485",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt.760",
+      "houseNo": "Apt.760",
       "street": "Police Line",
       "society": "Patel Nagar",
       "city": "Gurgaon",
+      "state": "Haryana",
       "country": "India"
     }
   },
@@ -125,12 +133,13 @@
     "lastName": "yadav",
     "email": "monikayadav@gmail.com",
     "phone": "9638239485",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt.459",
+      "houseNo": "Apt.459",
       "street": "Durga Mandir",
       "society": "Durga Vihar",
       "city": "Bhagalpur",
+      "state": "Bihar",
       "country": "India"
     }
   },
@@ -140,12 +149,13 @@
     "lastName": "Bhagat",
     "email": "shonabhagat@gmail.com",
     "phone": "9638239485",
-    "gender": "female",
+    "gender": "F",
     "address": {
-      "houseNumber": "Apt.345",
+      "houseNo": "Apt.345",
       "street": "Mohanganj Vihar",
       "society": "Mohana Vihar",
       "city": "Ranchi",
+      "state": "Jharkhand",
       "country": "India"
     }
   }

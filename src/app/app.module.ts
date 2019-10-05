@@ -1,24 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 //user define
-import { CustomerCardComponent } from "./customers-module/customer-card/customer-card.component";
-import { CustomerTableComponent } from './customers-module/customer-table/customer-table.component';
-import { CustomersModule } from "./customers-module/customer.module";
-import { AppRoutingModule } from './app-routing.module';
-import { CustomerHeaderComponent } from './customers-module/customer-header/customer-header.component';
-//import { CustomerListComponent } from './customers-module/customer-list/customer-list.component';
-
-
+import { CustomerModule } from "./customer-module/customer.module";
+//import { HeaderComponent } from "./header/header.component";
+import { AppComponent } from "./app.component";
+//import { FooterComponent } from "./footer/footer.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    BrowserModule,
-    AppRoutingModule, HttpClientModule,
-    CustomersModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CustomerModule],
   providers: [],
-  bootstrap: [CustomerTableComponent, CustomerHeaderComponent, CustomerCardComponent]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,32 @@
+.card__title {
+  margin: 0px;
+  background-color: #5656f0;
+  color: #fff;
+  line-height: 56px;
+  padding-left: 5px;
+}
+
+.card__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__image {
+  padding-left: 5px;
+  margin: 10px;
+}
+
+.card__title--icon {
+  float: right;
+  padding-top: 18px;
+  padding-right: 5px;
+}
+
+.view-order {
+  text-decoration: none;
+}
+
+.card__details {
+  padding-top: 10px;
+  font-size: 20px;
+}

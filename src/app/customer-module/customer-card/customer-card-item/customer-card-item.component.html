@@ -1,0 +1,16 @@
+<h2 class="card__title">{{customer.firstName}} {{customer.lastName}}
+    <span><i aria-hidden="true" class="fa fa-pencil-square-o card__title--icon"></i></span>
+</h2>
+<div class="card__body">
+    <figure class="card__image">
+        <img *ngIf="customer.gender === 'M'" src="../../../../assets/images/profileimage.jpg" height=100 width=100>
+        <img *ngIf="customer.gender === 'F'"src="../../../../assets/images/female.png" height=100 width=100>
+    </figure>
+    <section>
+        <address class="card__details">
+            <strong>{{customer.address.city}}</strong><br/>
+            <strong>{{customer.address.street}}</strong>
+        </address>
+        <a class="view-order" href="#">View Orders</a>
+    </section>
+</div>

@@ -1,0 +1,24 @@
+.customer__table {
+  width: 90%;
+  margin: 2em auto;
+}
+.customer__table--details {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+.table__heading {
+  border-bottom: 1px solid #ddd;
+  line-height: 2.8em;
+  text-align: left;
+}
+.customer__table--details tr:nth-of-type(even) {
+  background-color: #f4f4f4;
+}
+.customer__table--details tr td:nth-child(2) {
+  color: blue;
+}
+.table__item {
+  vertical-align: text-bottom;
+  padding-top: 10px;
+}

@@ -1,0 +1,16 @@
+.customer__card {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 95%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.customer__card--item {
+  background-color: #f1f1f1;
+  width: 300px;
+  margin: 10px;
+  height: 200px;
+  box-shadow: 2px 3px 4px 5px #ae8888;
+}
