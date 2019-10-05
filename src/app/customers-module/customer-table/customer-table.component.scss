@@ -1,0 +1,25 @@
+.container{
+    width:90%;
+    margin: 2em auto;
+}
+.row-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+.table-heading{
+    border-bottom: 1px solid #ddd;
+    line-height: 2.8em;
+    text-align: left;
+}
+.row-table tr:nth-of-type(even){
+    background-color: #f4f4f4;
+}
+.row-table tr td:nth-child(2){
+   color: blue;
+}
+.table-data{
+    vertical-align: text-bottom;
+    padding-top: 10px;
+}
+
