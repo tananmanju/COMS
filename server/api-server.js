@@ -15,11 +15,20 @@ server.use(function(req, res, next) {
 
 server.use(bodyParser.json());
 const customersDataFile = __dirname + "/data/customers.json";
+const ordersDataFile = __dirname + "/data/orders.json"
 
 //Read all customers details and getting response
 server.get("/api/customers", function(req, res) {
   console.log("Inside read all customers API!!");
   res.status(200).sendFile(customersDataFile);
+});
+
+
+
+//Read all orders details
+server.get("/api/orders", function(req, res) {
+  console.log("fuck you!");
+  res.status(200).sendFile(ordersDataFile);
 });
 
 const PORT = 5000;
