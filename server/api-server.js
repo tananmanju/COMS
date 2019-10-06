@@ -15,7 +15,7 @@ server.use(function(req, res, next) {
 
 server.use(bodyParser.json());
 const customersDataFile = __dirname + "/data/customers.json";
-const ordersDataFile = __dirname + "/data/orders.json"
+const ordersDataFile = __dirname + "/data/orders.json";
 
 //Read all customers details and getting response
 server.get("/api/customers", function(req, res) {
@@ -23,11 +23,9 @@ server.get("/api/customers", function(req, res) {
   res.status(200).sendFile(customersDataFile);
 });
 
-
-
-//Read all orders details
+//Read all orders
 server.get("/api/orders", function(req, res) {
-  console.log("fuck you!");
+  console.log("Inside read all customers API!!");
   res.status(200).sendFile(ordersDataFile);
 });
 

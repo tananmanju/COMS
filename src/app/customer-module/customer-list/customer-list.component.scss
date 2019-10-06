@@ -1,0 +1,21 @@
+.customer__list{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+.customer__list--item{
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 0;
+    padding:0.2em 0;
+}
+.figure__item{
+    margin-bottom: 0;
+    margin-right: 12px;
+    margin-top: 0;
+}
+.customer__list--span{
+    margin: 5px 0px;
+    font-size: 18px;
+}

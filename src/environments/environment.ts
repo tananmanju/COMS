@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  customerApi: 'http://localhost:5000/api/customers'
+  customerApi: 'http://localhost:5000/api/customers',
+  orderApi: 'http://localhost:5000/api/orders'
 };
 
 /*

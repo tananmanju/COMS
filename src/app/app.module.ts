@@ -8,12 +8,13 @@ import { AppComponent } from "./app.component";
 //import { FooterComponent } from "./footer/footer.component";
 import { AppRoutingModule } from "./app-routing.module";
 //to be later added in order modulre
-import { orderComponent } from './order-module/order.component';
+import { OrderModule } from "./order-module/order.module";
+//import { UnderMaintanceComponent } from './under-maintance/under-maintance.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent,orderComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CustomerModule],
+  declarations: [AppComponent, HeaderComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CustomerModule, OrderModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

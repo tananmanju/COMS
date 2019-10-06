@@ -1,9 +1,12 @@
-<main>
-    <section>
-        <ul>
-            <li *ngFor="let customer of customers">
-                {{customer.firstName}}{{customer.lastName}}
+<section class="customer__list">
+        <ul class="">
+            <li class="customer__list--item" *ngFor='let customerDetails of customers'>
+                <figure class="figure__item">
+                    <img *ngIf='customerDetails.gender == "F"' src="../../../../assets/images/female-customer.png" height=30 width=30>
+                    <img *ngIf='customerDetails.gender == "M"' src="../../../../assets/images/male-customer.png" height=30 width=30>
+                  
+                </figure>
+                <span class="customer__list--span"> {{customerDetails.firstName}} {{customerDetails.lastName}}</span>
             </li>
         </ul>
     </section>
-</main>
