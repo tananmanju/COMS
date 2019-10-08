@@ -160,19 +160,19 @@
     }
   },
   {
-    "firstName": "Rohan",
-    "lastName": "Kumar",
-    "gender": "female",
-    "email": "manju11@gmail.com",
-    "address": "xcxcxcxzcxzccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-    "city": "South Dakota",
-    "state": "South Dakota",
+    "firstName": "Satpal",
+    "lastName": "Tanan",
+    "gender": "M",
+    "email": "tanansatpal@gmail.com",
+    "phone": "1231231231",
+    "address": {
+      "houseNumber": "123",
+      "street": "test",
+      "society": "test",
+      "city": "Honolulu",
+      "state": "Hawaii",
+      "country": "India"
+    },
     "id": 1011
-  },
-  {
-    "firstName": "Rohan",
-    "lastName": "Kumar",
-    "email": "manju11@gmail.com",
-    "id": 1012
   }
 ]
