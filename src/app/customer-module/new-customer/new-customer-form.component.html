@@ -1,99 +1,120 @@
-<form class="form-group" name="customerForm" (ngSubmit)="formSubmitted(customerForm.value)" #customerForm="ngForm"
-  novalidate>
-  <h1>New Customer Form ADD</h1><br />
-  <div class="form-control">
-    <label for="firstName">First Name</label><br />
-    <input type="text" [(ngModel)]="firstName" id="firstName" name="firstName" #first="ngModel" minlength=3 maxlength=8
-      required />
-    <div class='error' *ngIf="(first.touched || first.dirty) &&  first.invalid">
-      <div class='danger' *ngIf="first.errors.required">First Name is rquired!!</div>
+<form class="form-group" name="customerForm" (ngSubmit)="formSubmitted(customerForm)" #customerForm="ngForm"
+      novalidate>
+  <h1>New Customer Form ADD</h1><br/>
+  <div class="form-control" [class.error-control]="first.invalid">
+    <label for="firstName">First Name</label><br/>
+    <input type="text" [class.error-control]="(first.touched || first.dirty || customerForm.submitted) && first.invalid"
+           [(ngModel)]="customer.firstName" id="firstName" name="firstName" #first="ngModel" minlength=3
+           maxlength="20"
+           required/>
+    <div class='error' *ngIf="(first.touched || first.dirty || customerForm.submitted) && first.invalid">
+      <div class='danger' *ngIf="first.errors.required">First Name is required!!</div>
       <div *ngIf="first.errors.minlength">First Name should have at least 2 characters!!</div>
-      <div *ngIf="first.errors.maxlength">First Name can not exceed more then 8 characters!!</div>
+      <div *ngIf="first.errors.maxlength">First Name can not exceed more then 20 characters!!</div>
     </div>
   </div>
   <div class="form-control">
-    <label for="lastName">Last Name</label><br />
-    <input type="text" [(ngModel)]="lastName" id="lastName" name="lastName" #last="ngModel" minlength=3 maxlength=8
-      required />
-    <div class='error' *ngIf="(last.touched || last.dirty) &&  last.invalid">
-      <div class='danger' *ngIf="last.errors.required">First Name is rquired!!</div>
-      <div *ngIf="last.errors.minlength">First Name should have at least 2 characters!!</div>
-      <div *ngIf="last.errors.maxlength">First Name can not exceed more then 8 characters!!</div>
+    <label for="lastName">Last Name</label><br/>
+    <input type="text" [class.error-control]="(last.touched || last.dirty || customerForm.submitted) && last.invalid"
+           [(ngModel)]="customer.lastName" id="lastName" name="lastName" #last="ngModel" minlength="2"
+           maxlength="20"
+           required/>
+    <div class='error' *ngIf="(last.touched || last.dirty || customerForm.submitted) &&  last.invalid">
+      <div class='danger' *ngIf="last.errors.required">Last Name is rquired!!</div>
+      <div *ngIf="last.errors.minlength">Last Name should have at least 2 characters!!</div>
+      <div *ngIf="last.errors.maxlength">Last Name can not exceed more then 8 characters!!</div>
     </div>
   </div>
 
   <div class="form-control">
-    <label for="gender">Gender</label><br />
-    <input type="radio" value="male" [(ngModel)]="gender" name="gender" id="gender" required #genderValue="ngModel">
-    Male
-    <input type="radio" value="female" [(ngModel)]="gender" name="gender" id="gender" required #genderValue="ngModel">
-    Female
-    <div class='error' *ngIf="(genderValue.touched || genderValue.dirty) &&  genderValue.invalid">
-      <div class='danger' *ngIf="genderValue.errors.required">Gender Name is rquired!!</div>
+    <label for="gender">Gender</label><br/>
+    <input type="radio" value="M" [(ngModel)]="customer.gender" name="gender" required #genderValue="ngModel">
+    Male<br/>
+    <input type="radio" value="F" [(ngModel)]="customer.gender" name="gender" required #genderValue="ngModel">
+    Female<br/>
+    <div class='error'
+         *ngIf="(genderValue.touched || genderValue.dirty || customerForm.submitted) &&  genderValue.invalid">
+      <div class='danger' *ngIf="genderValue.errors.required">Please select a gender!!</div>
     </div>
   </div>
   <div class="form-control">
-    <label for="email">email</label><br />
-    <input type="email" [(ngModel)]="email" id="email" name="email" #emailId="ngModel" required />
-    <div class='error' *ngIf="(emailId.touched || emailId.dirty) &&  emailId.invalid">
-      <div class='danger' *ngIf="emailId.errors.required">First Name is rquired!!</div>
+    <label for="email">Email</label><br/>
+    <input type="email" [class.error-control]="(emailId.touched || emailId.dirty || customerForm.submitted) && emailId.invalid" [(ngModel)]="customer.email" id="email" name="email" #emailId="ngModel" required/>
+    <div class='error' *ngIf="(emailId.touched || emailId.dirty || customerForm.submitted) &&  emailId.invalid">
+      <div class='danger' *ngIf="emailId.errors.required">Email is required!!</div>
     </div>
   </div>
   
   <div class="form-control">
-    <label for="hno">H No</label><br />
-    <textarea type="text" [(ngModel)]="address.houseNo" id="hno" name="houseNo" #hNoValue="ngModel" minlength=1
-      maxlength="6" required></textarea>
-    <div class='error' *ngIf="(hNoValue.touched || hNoValue.dirty) &&  hNoValue.invalid">
-      <div class='danger' *ngIf="hNoValue.errors.required">addressvalue Name is rquired!!</div>
-      <div *ngIf="hNoValue.errors.minlength">First Name should have at least 240 characters!!</div>
-      <div *ngIf="hNoValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
-    </div>
-  </div>
-  <div class="form-control">
-    <label for="street">Street</label><br />
-    <textarea type="text" [(ngModel)]="address.street" id="street" name="street" #streetValue="ngModel" minlength=3
-      maxlength=20 required></textarea>
-    <div class='error' *ngIf="(streetValue.touched || streetValue.dirty) &&  streetValue.invalid">
-      <div class='danger' *ngIf="streetValue.errors.required">addressvalue Name is rquired!!</div>
-      <div *ngIf="streetValue.errors.minlength">First Name should have at least 240 characters!!</div>
-      <div *ngIf="streetValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
-    </div>
-  </div>
-  <div class="form-control">
-    <label for="society">society</label><br />
-    <textarea type="text" [(ngModel)]="address.society" id="society" name="society" #societyValue="ngModel" minlength=3
-      maxlength=20 required></textarea>
-    <div class='error' *ngIf="(societyValue.touched || societyValue.dirty) &&  societyValue.invalid">
-      <div class='danger' *ngIf="streetValue.errors.required">addressvalue Name is rquired!!</div>
-      <div *ngIf="societyValue.errors.minlength">First Name should have at least 240 characters!!</div>
-      <div *ngIf="societyValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
-    </div>
-  </div>
+    <label for="phone">Phone</label><br/>
 
+    <input type="text" [class.error-control]="(phone.touched || phone.dirty || customerForm.submitted) && phone.invalid" [(ngModel)]="customer.phone" id="phone" name="phone" #phone="ngModel" required/>
+    <div class='error' *ngIf="(phone.touched || phone.dirty || customerForm.submitted) &&  phone.invalid">
+      <div class='danger' *ngIf="phone.errors.required">Phone is required!!</div>
+    </div>
+  </div>
   <div class="form-control">
-    <label for="state">State</label>
-    <select class="form-control" id="state" name="state" [(ngModel)]="address.state" (ngModelChange)="getCities($event)" required >
+    <label for="address">House No</label><br/>
+    <textarea type="text" [class.error-control]="(addressValue.touched || addressValue.dirty || customerForm.submitted) && addressValue.invalid" [(ngModel)]="customer.address.houseNumber" id="address" name="address" #addressValue="ngModel"
+              required></textarea>
+    <div class='error'
+         *ngIf="(addressValue.touched || addressValue.dirty || customerForm.submitted) &&  addressValue.invalid">
+      <div class='danger' *ngIf="addressValue.errors.required">House Number is required!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="street">Street</label><br/>
+    <textarea type="text" [(ngModel)]="customer.address.street" id="street" name="street"></textarea>
+  </div>
+  <div class="form-control">
+    <label for="society">Society</label><br/>
+    <textarea type="text" [class.error-control]="(societyValue.touched || societyValue.dirty || customerForm.submitted) && societyValue.invalid" [(ngModel)]="customer.address.society" id="society" name="society" #societyValue="ngModel"
+              minlength="4"
+              maxlength="40" required></textarea>
+    <div class='error'
+         *ngIf="(societyValue.touched || societyValue.dirty || customerForm.submitted) &&  societyValue.invalid">
+      <div class='danger' *ngIf="societyValue.errors.required">Society is required!!</div>
+      <div *ngIf="societyValue.errors.minlength">Society should have at least 4 characters!!</div>
+      <div *ngIf="societyValue.errors.maxlength">Society can not exceed more then 40 characters!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="state">State</label><br/>
+    <select class="form-control" [class.error-control]="(state.touched || state.dirty || customerForm.submitted) && state.invalid" id="state" name="state" [(ngModel)]="customer.address.state"
+            (ngModelChange)="getCities($event)" #state="ngModel" required>
       <option value="">Choose your state</option>
       <option *ngFor="let state of states" [ngValue]="state">{{state }}
       </option>
     </select>
+    <div class='error' *ngIf="(state.touched || state.dirty || customerForm.submitted) &&  state.invalid">
+      <div class='danger' *ngIf="state.errors.required">State is required!!</div>
+    </div>
   </div>
   <div class="form-control">
-    <label for="city">city</label><br />
-    <select class="form-control" id="city" name="city" [(ngModel)]="address.city" city>
+    <label for="city">City</label><br/>
+    <select class="form-control" id="city" [class.error-control]="(city.touched || city.dirty || customerForm.submitted) && city.invalid" name="city" [(ngModel)]="customer.address.city" #city="ngModel" required>
       <option value="">Choose your city</option>
       <option *ngFor="let city of cities" [ngValue]="city">{{city }}
       </option>
     </select>
-
+    <div class='error' *ngIf="(city.touched || city.dirty || customerForm.submitted) &&  city.invalid">
+      <div class='danger' *ngIf="city.errors.required">City is required!!</div>
+    </div>
   </div>
 
-
-
-  <input type="submit" value="Submit" />
-  <hr />
-  <h1>Form Data : {{customerForm.value}}</h1>
-  <h1>Form Data : {{message}}</h1>
-  <h1>Form Status : {{customerForm.valid}}</h1>
+  <div class="form-control">
+    <label for="country">Country</label><br/>
+    <select class="form-control" [class.error-control]="(country.touched || country.dirty || customerForm.submitted) && country.invalid" id="country" name="country" [(ngModel)]="customer.address.country" #country="ngModel"
+            required>
+      <option value="">Choose your country</option>
+      <option value="US">United States</option>
+    </select>
+    <div class='error' *ngIf="(country.touched || country.dirty || customerForm.submitted) &&  country.invalid">
+      <div class='danger' *ngIf="country.errors.required">Please select a country</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <input type="submit" value="Submit"/>
+  </div>
+  <hr/>
 </form>

@@ -26,7 +26,12 @@ server.get("/api/customers", function (req, res) {
 
 //Create all customers details and getting response
 server.post("/api/customers", function (req, res) {
- fs.readFile(customersDataFile, 'utf8', (err, data) => {
+  //   fs.readFile('customersDataFile', 'utf8', function(err, contents) {
+  //     console.log(contents);
+  //     res.status(200).send(contents);
+
+
+  fs.readFile(customersDataFile, 'utf8', (err, data) => {
     if (err) {
       return res.send(406, "Error while adding customer");
     }
@@ -39,11 +44,10 @@ server.post("/api/customers", function (req, res) {
     customers.push(newCustomer)
     fs.writeFile(customersDataFile, JSON.stringify(customers, null, 2), () => {
       res.send(200, customers);
+
     });
 
   })
-
-
 });
 
 //Read all orders
