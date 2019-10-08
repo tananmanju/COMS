@@ -158,21 +158,6 @@
       "state": "Jharkhand",
       "country": "India"
     }
-  },
-  {
-    "firstName": "Rohan",
-    "lastName": "Kumar",
-    "gender": "female",
-    "email": "manju11@gmail.com",
-    "address": "xcxcxcxzcxzccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-    "city": "South Dakota",
-    "state": "South Dakota",
-    "id": 1011
-  },
-  {
-    "firstName": "Rohan",
-    "lastName": "Kumar",
-    "email": "manju11@gmail.com",
-    "id": 1012
   }
+
 ]

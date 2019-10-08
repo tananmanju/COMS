@@ -1,10 +1,11 @@
 //model representing customer address
 export class Address {
   constructor(
-    private houseNumber: string,
-    private street: string,
-    private society: string,
-    private city: string,
-    private country: string
+    public houseNo: string,
+    public street: string,
+    public society: string,
+    public city: string,
+    public state: string,
+    public country: string
   ) {}
 }

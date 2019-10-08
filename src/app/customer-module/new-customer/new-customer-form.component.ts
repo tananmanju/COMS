@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms"
 import { Customer } from '../models/customer';
 import { CustomerService } from '../services/customer.service';
+import { Address } from '../models/address';
 
 @Component({
   selector: "add-new-customer",
@@ -1122,18 +1123,20 @@ export class NewCustomerFormComponent {
   states: string[];
   cities: string[];
   message: string;
+  address = {}
   constructor(private customerService: CustomerService) {
     console.log("Inside CustomerTableComponent constructor!!");
     this.states = Object.keys(this.data);
   }
   formSubmitted(data) {
-    this.customerService.postCustomer(data).subscribe(res => {
-      console.log("data has submitted", res);
-    });
+    console.log(data);
+    // this.customerService.postCustomer(data).subscribe(res => {
+    //   console.log("data has submitted", res);
+    // });
   }
 
   getCities(state) {
-    console.log(state,this.data[state])
+    console.log(state, this.data[state])
     this.cities = this.data[state]
   }
 

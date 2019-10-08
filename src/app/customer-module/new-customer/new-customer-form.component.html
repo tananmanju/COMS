@@ -39,29 +39,41 @@
       <div class='danger' *ngIf="emailId.errors.required">First Name is rquired!!</div>
     </div>
   </div>
+  
   <div class="form-control">
-    <label for="phone">phone</label><br />
-    <textarea type="text" [(ngModel)]="address" id="address" name="address" #addressValue="ngModel" minlength=240
-      maxlength=250 required></textarea>
-    <div class='error' *ngIf="(addressValue.touched || addressValue.dirty) &&  addressValue.invalid">
-      <div class='danger' *ngIf="addressValue.errors.required">addressvalue Name is rquired!!</div>
-      <div *ngIf="addressValue.errors.minlength">First Name should have at least 240 characters!!</div>
-      <div *ngIf="addressValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
+    <label for="hno">H No</label><br />
+    <textarea type="text" [(ngModel)]="address.houseNo" id="hno" name="houseNo" #hNoValue="ngModel" minlength=1
+      maxlength="6" required></textarea>
+    <div class='error' *ngIf="(hNoValue.touched || hNoValue.dirty) &&  hNoValue.invalid">
+      <div class='danger' *ngIf="hNoValue.errors.required">addressvalue Name is rquired!!</div>
+      <div *ngIf="hNoValue.errors.minlength">First Name should have at least 240 characters!!</div>
+      <div *ngIf="hNoValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
     </div>
   </div>
   <div class="form-control">
-    <label for="address">Address</label><br />
-    <textarea type="text" [(ngModel)]="address" id="address" name="address" #addressValue="ngModel" minlength=240
-      maxlength=250 required></textarea>
-    <div class='error' *ngIf="(addressValue.touched || addressValue.dirty) &&  addressValue.invalid">
-      <div class='danger' *ngIf="addressValue.errors.required">addressvalue Name is rquired!!</div>
-      <div *ngIf="addressValue.errors.minlength">First Name should have at least 240 characters!!</div>
-      <div *ngIf="addressValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
+    <label for="street">Street</label><br />
+    <textarea type="text" [(ngModel)]="address.street" id="street" name="street" #streetValue="ngModel" minlength=3
+      maxlength=20 required></textarea>
+    <div class='error' *ngIf="(streetValue.touched || streetValue.dirty) &&  streetValue.invalid">
+      <div class='danger' *ngIf="streetValue.errors.required">addressvalue Name is rquired!!</div>
+      <div *ngIf="streetValue.errors.minlength">First Name should have at least 240 characters!!</div>
+      <div *ngIf="streetValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
     </div>
   </div>
+  <div class="form-control">
+    <label for="society">society</label><br />
+    <textarea type="text" [(ngModel)]="address.society" id="society" name="society" #societyValue="ngModel" minlength=3
+      maxlength=20 required></textarea>
+    <div class='error' *ngIf="(societyValue.touched || societyValue.dirty) &&  societyValue.invalid">
+      <div class='danger' *ngIf="streetValue.errors.required">addressvalue Name is rquired!!</div>
+      <div *ngIf="societyValue.errors.minlength">First Name should have at least 240 characters!!</div>
+      <div *ngIf="societyValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
+    </div>
+  </div>
+
   <div class="form-control">
     <label for="state">State</label>
-    <select class="form-control" id="state" name="state" [(ngModel)]="state" (ngModelChange)="getCities($event)">
+    <select class="form-control" id="state" name="state" [(ngModel)]="address.state" (ngModelChange)="getCities($event)" required >
       <option value="">Choose your state</option>
       <option *ngFor="let state of states" [ngValue]="state">{{state }}
       </option>
@@ -69,7 +81,7 @@
   </div>
   <div class="form-control">
     <label for="city">city</label><br />
-    <select class="form-control" id="city" name="city" [(ngModel)]="city">
+    <select class="form-control" id="city" name="city" [(ngModel)]="address.city" city>
       <option value="">Choose your city</option>
       <option *ngFor="let city of cities" [ngValue]="city">{{city }}
       </option>
