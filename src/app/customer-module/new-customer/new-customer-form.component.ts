@@ -1160,6 +1160,7 @@ export class NewCustomerFormComponent {
 
   getCities(state) {
     console.log(state, this.data[state]);
+    this.customer.address.city = '';
     this.cities = this.data[state];
   }
 

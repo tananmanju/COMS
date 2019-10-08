@@ -158,6 +158,21 @@
       "state": "Jharkhand",
       "country": "India"
     }
+  },
+  {
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "gender": "M",
+    "email": "clark@jl.com",
+    "phone": "123123131",
+    "address": {
+      "houseNo": "123",
+      "street": "Daily Planet",
+      "society": "Metropolis",
+      "city": "Hillsboro",
+      "state": "Oregon",
+      "country": "US"
+    },
+    "id": 1011
   }
-
 ]
