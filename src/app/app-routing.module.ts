@@ -8,6 +8,7 @@ import { CustomerTableComponent } from "./customer-module/customer-table/custome
 import { CustomerListComponent } from "./customer-module/customer-list/customer-list.component";
 import { UnderMaintanceComponent } from "./under-maintance/under-maintance.component";
 import { NewCustomerFormComponent } from './customer-module/new-customer/new-customer-form.component';
+import { CustomerOrderComponent } from './customer-module/customer-order/customer-order.component';
 
 const ROUTES: Routes = [
   { path: "", redirectTo: "customers", pathMatch: "full" },
@@ -22,7 +23,15 @@ const ROUTES: Routes = [
       { path: "new-customer", component: NewCustomerFormComponent }
     ]
   },
-  { path: "orders", component: OrderTableComponent },
+  {
+    path: "orders", component: OrderTableComponent
+  },
+  {
+    path: "order",
+    children: [
+      { path: ":customerId", component: CustomerOrderComponent }
+    ]
+  },
   { path: "login", component: UnderMaintanceComponent },
   { path: "about", component: UnderMaintanceComponent }
 ];
@@ -31,4 +40,4 @@ const ROUTES: Routes = [
   imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

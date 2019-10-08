@@ -46,7 +46,7 @@ class Customer {
 //model representing customer address
 class Address {
 	constructor(
-		private houseNumber:string,
+		private houseNo:string,
 		private street:string,
 		private society:string,
 	    private city:string,

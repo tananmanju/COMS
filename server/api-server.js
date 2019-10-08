@@ -26,11 +26,6 @@ server.get("/api/customers", function (req, res) {
 
 //Create all customers details and getting response
 server.post("/api/customers", function (req, res) {
-  //   fs.readFile('customersDataFile', 'utf8', function(err, contents) {
-  //     console.log(contents);
-  //     res.status(200).send(contents);
-
-
   fs.readFile(customersDataFile, 'utf8', (err, data) => {
     if (err) {
       return res.send(406, "Error while adding customer");
@@ -48,6 +43,23 @@ server.post("/api/customers", function (req, res) {
     });
 
   })
+});
+
+//read one customer data
+server.get('/api/orders/:customerId', function (req, res) {
+  console.log("Just running /api/orders/:customerId REST URI!!");
+  let customerId = parseInt(req.params.customerId);
+  console.log(customerId);
+  fs.readFile(ordersDataFile, 'utf8', (err, data) => {
+    if (err) {
+      return res.send(406, "Error while fetching  customer order");
+    }
+    let orders = JSON.parse(data);
+
+    let userOrders = orders.filter(order => order.customerId === customerId);
+
+    res.status(200).send(userOrders);
+  });
 });
 
 //Read all orders

@@ -55,7 +55,7 @@
   </div>
   <div class="form-control">
     <label for="address">House No</label><br/>
-    <textarea type="text" [class.error-control]="(addressValue.touched || addressValue.dirty || customerForm.submitted) && addressValue.invalid" [(ngModel)]="customer.address.houseNumber" id="address" name="address" #addressValue="ngModel"
+    <textarea type="text" [class.error-control]="(addressValue.touched || addressValue.dirty || customerForm.submitted) && addressValue.invalid" [(ngModel)]="customer.address.houseNo" id="address" name="address" #addressValue="ngModel"
               required></textarea>
     <div class='error'
          *ngIf="(addressValue.touched || addressValue.dirty || customerForm.submitted) &&  addressValue.invalid">

@@ -8,6 +8,6 @@ export class OrderService {
   constructor(private http: HttpClient) {}
 
   getorders() {
-    return this.http.get<Order[]>(environment.orderApi);
+    return this.http.get<Order[]>(environment.baseApi + 'orders');
   }
 }

@@ -10,12 +10,16 @@ export class CustomerService {
 
   }
 
-  getCustomers() {
-    return this.http.get<Customer[]>(environment.customerApi);
-  }
+    getCustomers() {
+        return this.http.get<Customer[]>(environment.baseApi + 'customers');
+    }
 
-  postCustomer(customer: Customer) {
-    return this.http.post<Customer[]>(environment.customerApi, customer);
-  }
+    postCustomer(customer: Customer[]) {
+        return this.http.post<Customer[]>(environment.baseApi + 'customers', customer);
+    }
+
+    getCustomersOrders(customerId) {
+        return this.http.get(environment.baseApi + 'orders/' + customerId);
+    }
 }
 

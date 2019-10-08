@@ -18,7 +18,7 @@ export class NewCustomerFormComponent {
     email: '',
     phone: '',
     address: {
-      houseNumber: '',
+      houseNo: '',
       street: '',
       society: '',
       city: '',

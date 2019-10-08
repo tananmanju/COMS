@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: "customer-card-item",
@@ -8,5 +9,9 @@ import { Component, Input } from "@angular/core";
 export class CustomerCardItemComponent {
   @Input() private customer;
 
-  constructor() {}
+  constructor(private router:Router) {}
+
+  goToOrders(){
+    this.router.navigate(['order',this.customer.id]);
+  }
 }
