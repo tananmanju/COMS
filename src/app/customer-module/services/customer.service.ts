@@ -14,7 +14,7 @@ export class CustomerService {
         return this.http.get<Customer[]>(environment.baseApi + 'customers');
     }
 
-    postCustomer(customer: Customer[]) {
+    postCustomer(customer: Customer) {
         return this.http.post<Customer[]>(environment.baseApi + 'customers', customer);
     }
 

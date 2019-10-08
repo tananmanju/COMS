@@ -19,7 +19,7 @@ export class CustomerOrderComponent implements OnInit{
   ngOnInit(){
     this.param1 = this.route.snapshot.params.customerId;
     console.log(this.param1);
-    this.customerService.getCustomersOrders(this.param1).subscribe(orders => {
+    this.customerService.getCustomersOrders(this.param1).subscribe((orders:any) => {
       this.customerOrders = orders.map(order=>{
         let total = 0;
         for(let pro of order.products){
