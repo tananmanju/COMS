@@ -1,10 +1,12 @@
-import {Component} from "@angular/core";
+import { Component, Inject } from "@angular/core";
 
 @Component({
-     selector:'footer',
-     templateUrl:'./footer.component.html',
-     styleUrls:['./footer.component.scss']
+  selector: "page-footer",
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss"]
 })
-export class FooterComponent{
-  
+export class FooterComponent {
+  constructor(@Inject("TeamName") private TeamName: string) {
+    console.log("Inside the Footer Component");
+  }
 }

@@ -1,0 +1,18 @@
+<section role="main">
+  <h1>{{title}}</h1>
+  <ul class="container">
+    <li *ngFor="let customer of customers" class="card">
+      <h2 class="heading">{{customer.firstName}}{{customer.lastName}}
+        <span><i aria-hidden="true" class="fa fa-pencil-square-o icon"></i></span>
+      </h2>
+      <div class="flex-grid">
+        <figure class="card-image"><img src="./customers/customer-card/assets/images/profileimage.jpg"  height=100 width=100></figure>
+        <address class="address font-size">
+          <strong>{{customer.address.city}}</strong><br />
+          <strong>{{customer.address.street}}</strong><br /><br />
+          <a class="view-order" href="#">View Orders</a>
+        </address>
+      </div>
+    </li>
+  </ul>
+</section>

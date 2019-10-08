@@ -5,16 +5,29 @@ import { HttpClientModule } from "@angular/common/http";
 import { CustomerModule } from "./customer-module/customer.module";
 import { HeaderComponent } from "./header/header.component";
 import { AppComponent } from "./app.component";
-//import { FooterComponent } from "./footer/footer.component";
+import { UnderMaintanceComponent } from "./under-maintance/under-maintance.component";
+import { FooterComponent } from "./footer/footer.component";
 import { AppRoutingModule } from "./app-routing.module";
-//to be later added in order modulre
+//To be later added in order modulre
 import { OrderModule } from "./order-module/order.module";
-//import { UnderMaintanceComponent } from './under-maintance/under-maintance.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CustomerModule, OrderModule],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    HeaderComponent,
+    AppComponent,
+    UnderMaintanceComponent,
+    FooterComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CustomerModule,
+    OrderModule
+  ],
+  providers: [
+    { provide: "TeamName", useValue: { teamName: "Semantic Warriors" } }
+  ],
+  bootstrap: [HeaderComponent, AppComponent, FooterComponent]
 })
-export class AppModule { }
+export class AppModule {}

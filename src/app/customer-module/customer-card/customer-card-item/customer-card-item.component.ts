@@ -1,16 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-    selector: 'customer-card-item',
-    templateUrl: './customer-card-item.component.html',
-    styleUrls: ['./customer-card-item.component.scss']
+  selector: "customer-card-item",
+  templateUrl: "./customer-card-item.component.html",
+  styleUrls: ["./customer-card-item.component.scss"]
 })
+export class CustomerCardItemComponent {
+  @Input() private customer;
 
-
-export class CustomerCardItemComponent{
-    @Input() private customer;
-
-    constructor(){
-
-    }
+  constructor() {}
 }

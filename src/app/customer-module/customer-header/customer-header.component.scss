@@ -10,12 +10,15 @@
 .section__first {
   margin-top: 25px;
 }
+.navbar__nav--item {
+  list-style: none;
+}
 .h2__heading {
-  font-size: 25px;
+  font-size: 2em;
 }
 .user__icon--img {
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   margin-top: 6px;
   vertical-align: text-bottom;
 }
@@ -25,12 +28,10 @@
 .navbar__nav {
   display: inline-flex;
 }
-.navbar__item {
+.navbar__item,
+.navbar__nav--item {
   margin: 0px 0px;
   list-style: none;
-}
-.navbar__item--title {
-  color: #333 !important;
 }
 .navbar__item--title {
   float: left;
@@ -39,6 +40,9 @@
   font-size: 17px;
   color: #bdb9b9;
   font-weight: 700;
+}
+.active-child-route {
+  color: #333;
 }
 .icon__grid {
   margin-right: 12px;

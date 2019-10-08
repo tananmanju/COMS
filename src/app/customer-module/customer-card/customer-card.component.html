@@ -1,7 +1,7 @@
-<section>
-  <ul class="customer__card">
-    <li *ngFor="let customer of customers" class="customer__card--item">
+<article class="customer__container">
+  <ul class="customer__list">
+    <li *ngFor="let customer of customers" class="customer__item">
       <customer-card-item [customer]="customer"></customer-card-item>
     </li>
   </ul>
-</section>
+</article>

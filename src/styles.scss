@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*page specific global changes*/
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+em {
+  font-style: normal;
+}
+
+* {
+  font-family:sans-serif;
+}

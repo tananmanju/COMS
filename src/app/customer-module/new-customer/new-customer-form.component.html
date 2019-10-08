@@ -1,0 +1,87 @@
+<form class="form-group" name="customerForm" (ngSubmit)="formSubmitted(customerForm.value)" #customerForm="ngForm"
+  novalidate>
+  <h1>New Customer Form ADD</h1><br />
+  <div class="form-control">
+    <label for="firstName">First Name</label><br />
+    <input type="text" [(ngModel)]="firstName" id="firstName" name="firstName" #first="ngModel" minlength=3 maxlength=8
+      required />
+    <div class='error' *ngIf="(first.touched || first.dirty) &&  first.invalid">
+      <div class='danger' *ngIf="first.errors.required">First Name is rquired!!</div>
+      <div *ngIf="first.errors.minlength">First Name should have at least 2 characters!!</div>
+      <div *ngIf="first.errors.maxlength">First Name can not exceed more then 8 characters!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="lastName">Last Name</label><br />
+    <input type="text" [(ngModel)]="lastName" id="lastName" name="lastName" #last="ngModel" minlength=3 maxlength=8
+      required />
+    <div class='error' *ngIf="(last.touched || last.dirty) &&  last.invalid">
+      <div class='danger' *ngIf="last.errors.required">First Name is rquired!!</div>
+      <div *ngIf="last.errors.minlength">First Name should have at least 2 characters!!</div>
+      <div *ngIf="last.errors.maxlength">First Name can not exceed more then 8 characters!!</div>
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label for="gender">Gender</label><br />
+    <input type="radio" value="male" [(ngModel)]="gender" name="gender" id="gender" required #genderValue="ngModel">
+    Male
+    <input type="radio" value="female" [(ngModel)]="gender" name="gender" id="gender" required #genderValue="ngModel">
+    Female
+    <div class='error' *ngIf="(genderValue.touched || genderValue.dirty) &&  genderValue.invalid">
+      <div class='danger' *ngIf="genderValue.errors.required">Gender Name is rquired!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="email">email</label><br />
+    <input type="email" [(ngModel)]="email" id="email" name="email" #emailId="ngModel" required />
+    <div class='error' *ngIf="(emailId.touched || emailId.dirty) &&  emailId.invalid">
+      <div class='danger' *ngIf="emailId.errors.required">First Name is rquired!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="phone">phone</label><br />
+    <textarea type="text" [(ngModel)]="address" id="address" name="address" #addressValue="ngModel" minlength=240
+      maxlength=250 required></textarea>
+    <div class='error' *ngIf="(addressValue.touched || addressValue.dirty) &&  addressValue.invalid">
+      <div class='danger' *ngIf="addressValue.errors.required">addressvalue Name is rquired!!</div>
+      <div *ngIf="addressValue.errors.minlength">First Name should have at least 240 characters!!</div>
+      <div *ngIf="addressValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="address">Address</label><br />
+    <textarea type="text" [(ngModel)]="address" id="address" name="address" #addressValue="ngModel" minlength=240
+      maxlength=250 required></textarea>
+    <div class='error' *ngIf="(addressValue.touched || addressValue.dirty) &&  addressValue.invalid">
+      <div class='danger' *ngIf="addressValue.errors.required">addressvalue Name is rquired!!</div>
+      <div *ngIf="addressValue.errors.minlength">First Name should have at least 240 characters!!</div>
+      <div *ngIf="addressValue.errors.maxlength">First Name can not exceed more then 250 characters!!</div>
+    </div>
+  </div>
+  <div class="form-control">
+    <label for="state">State</label>
+    <select class="form-control" id="state" name="state" [(ngModel)]="state" (ngModelChange)="getCities($event)">
+      <option value="">Choose your state</option>
+      <option *ngFor="let state of states" [ngValue]="state">{{state }}
+      </option>
+    </select>
+  </div>
+  <div class="form-control">
+    <label for="city">city</label><br />
+    <select class="form-control" id="city" name="city" [(ngModel)]="city">
+      <option value="">Choose your city</option>
+      <option *ngFor="let city of cities" [ngValue]="city">{{city }}
+      </option>
+    </select>
+
+  </div>
+
+
+
+  <input type="submit" value="Submit" />
+  <hr />
+  <h1>Form Data : {{customerForm.value}}</h1>
+  <h1>Form Data : {{message}}</h1>
+  <h1>Form Status : {{customerForm.valid}}</h1>
+</form>

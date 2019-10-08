@@ -1,23 +1,33 @@
 <header class="top__header">
   <section class="section__first">
     <h2 class='top__header--heading'>
-      <img src="http://simpleicon.com/wp-content/uploads/user1.png" alt="user-icon" role="img" aria-label="user-icon"
+      <img src="../../../assets/images/customer.png" alt="user-icon" role="img" aria-label="user-icon"
         class="user__icon--img" />
       Customers</h2>
   </section>
-  <section  class="section__second">
+  <section class="section__second">
     <nav role="navigation" class="menubar">
       <ul role="menubar" class="nav navbar__nav">
-        <li role="menuitem" class="navbar__item"><a routerLink='card-view' class="navbar__item--title"><i
-              class="fa fa-th icon__grid" aria-hidden="true"></i>Card
-            View</a>
+        <li role="menuitem" class="navbar__nav--item">
+          <a routerLink='card-view' routerLinkActive="active-child-route" class="navbar__item--title">
+            <i class="fa fa-th icon__grid" aria-hidden="true"></i>Card View
+          </a>
         </li>
-        <li role="menuitem" class="navbar__item"><a routerLink='list-view' class="navbar__item--title"><i
-              class='fa fa-list icon__grid' aria-hidden="true"></i>Card List</a></li>
-        <li role="menuitem" class="navbar__item"><a routerLink='table-view' class="navbar__item--title"><i
-              class='fa fa-table icon__grid' aria-hidden="true"></i>Table View</a></li>
-        <li role="menuitem" class="navbar__item"><a href='#' class="navbar__item--title"><i
-              class='fa fa-plus icon__grid' aria-hidden="true"></i>New Customer</a></li>
+        <li role="menuitem" class="navbar__item">
+          <a routerLink='list-view' routerLinkActive="active-child-route" class="navbar__item--title">
+            <i class='fa fa-list icon__grid' aria-hidden="true"></i>Card List
+          </a>
+        </li>
+        <li role="menuitem" class="navbar__item">
+          <a routerLink='table-view' routerLinkActive="active-child-route" class="navbar__item--title"><i
+              class='fa fa-table icon__grid' aria-hidden="true"></i>Table View
+          </a>
+        </li>
+        <li role="menuitem" class="navbar__item">
+          <a routerLink="new-customer" routerLinkActive="active-child-route" class="navbar__item--title">
+            <i class='fa fa-plus icon__grid' aria-hidden="true"></i>New Customer
+          </a>
+        </li>
       </ul>
       <ul class="nav navbar__nav navbar__right">
         <li class="customer__filter">

@@ -1,16 +1,18 @@
-<h2 class="card__title">{{customer.firstName}} {{customer.lastName}}
-    <span><i aria-hidden="true" class="fa fa-pencil-square-o card__title--icon"></i></span>
-</h2>
-<div class="card__body">
-    <figure class="card__image">
-        <img *ngIf="customer.gender === 'M'" src="../../../../assets/images/profileimage.jpg" height=100 width=100>
-        <img *ngIf="customer.gender === 'F'"src="../../../../assets/images/female.png" height=100 width=100>
+<section class="card__module">
+  <h4 class="card__title">{{customer.firstName}} {{customer.lastName}}
+    <span class="card__edit"><i aria-hidden="true" class="fa fa-pencil-square-o card__title--icon"></i></span>
+  </h4>
+  <div class="card__body">
+    <figure role="figure" class="card__image">
+      <img *ngIf="customer.gender === 'M'" src="../../../../assets/images/male.png" height=100 width=100>
+      <img *ngIf="customer.gender === 'F'" src="../../../../assets/images/female.png" height=100 width=100>
     </figure>
-    <section class="card__details">
-        <address class="card__address">
-            <em>{{customer.address.city}}</em><br/>
-            <em>{{customer.address.street}}</em>
-        </address>
-        <a class="view-order" href="#">View Orders</a>
+    <section class="card__info">
+      <address class="card__details">
+        <em>{{customer.address.city}}</em><br />
+        <em>{{customer.address.street}}</em>
+      </address>
+      <a class="view-order" href="#">View Orders</a>
     </section>
-</div>
+  </div>
+</section>
