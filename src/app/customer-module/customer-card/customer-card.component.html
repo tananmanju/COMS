@@ -1,7 +1,4 @@
 <article class="customer__container">
-  <ul class="customer__list">
-    <li *ngFor="let customer of customers" class="customer__item">
-      <customer-card-item [customer]="customer"></customer-card-item>
-    </li>
-  </ul>
+  <customer-card-item *ngFor="let customer of customers" class="customer__list"
+    [customer]="customer"></customer-card-item>
 </article>

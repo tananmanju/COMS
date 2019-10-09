@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {Customer} from '../models/customer';
-import {CustomerService} from '../services/customer.service';
+import { Component } from '@angular/core';
+import { Customer } from '../models/customer';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'add-new-customer',
@@ -1166,4 +1166,3 @@ export class NewCustomerFormComponent {
 
 
 }
-

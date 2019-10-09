@@ -15,8 +15,11 @@
     <tbody>
       <tr *ngFor='let customer of customers'>
         <td>
-          <img *ngIf="customer.gender === 'M'" src="../../../../assets/images/profileimage.jpg" height=70 width=70>
-          <img *ngIf="customer.gender === 'F'" src="../../../../assets/images/female.png" height=70 width=70>
+          <img *ngIf="customer.gender === 'M'" src="../../../../assets/images/male.png" 
+          height=70 width=70>
+          
+          <img *ngIf="customer.gender === 'F'" src="../../../../assets/images/female.png" 
+          height=70 width=70>
 
         </td>
         <td class="table__item">{{customer.firstName}}</td>
@@ -25,7 +28,7 @@
         <td class="table__item">{{customer.address.city}}</td>
         <td class="table__item">{{customer.address.country}}</td>
         <td class="table__item">345</td>
-      </tr>
+     </tr>
     </tbody>
   </table>
 </section>

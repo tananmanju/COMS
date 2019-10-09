@@ -1,14 +1,14 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {environment} from '../../../environments/environment';
-import {Customer} from '../models/customer';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+import { Customer } from '../models/customer';
 
 
 @Injectable()
 export class CustomerService {
-  constructor(private http: HttpClient) {
+    constructor(private http: HttpClient) {
 
-  }
+    }
 
     getCustomers() {
         return this.http.get<Customer[]>(environment.baseApi + 'customers');
@@ -22,4 +22,3 @@ export class CustomerService {
         return this.http.get(environment.baseApi + 'orders/' + customerId);
     }
 }
-

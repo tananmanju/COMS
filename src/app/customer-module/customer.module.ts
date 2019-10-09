@@ -23,7 +23,7 @@ import { CustomerOrderComponent } from './customer-order/customer-order.componen
     NewCustomerFormComponent,
     CustomerOrderComponent
   ],
-  imports: [CommonModule, AppRoutingModule,FormsModule],
+  imports: [CommonModule, AppRoutingModule, FormsModule],
   providers: [CustomerService],
   exports: [
     CustomerComponent,
@@ -34,4 +34,4 @@ import { CustomerOrderComponent } from './customer-order/customer-order.componen
     CustomerOrderComponent
   ]
 })
-export class CustomerModule {}
+export class CustomerModule { }

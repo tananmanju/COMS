@@ -1,49 +1,47 @@
-@import "../../common/mixins/mixins.scss";
 
-.customer__item {
-  width: 100%;
-  padding: 1em;
-  font-size: 1.4em;
-  margin: 10px;
-  border: 1px solid #345672;
-  @include prefix(box-shadow, 0 3px 6px rgba(0, 0, 0, 0.16), ms o webkit);
-  background: url("../../../assets/images/bg1.jpg");
-  color: #000;
-  font-family: "Rajdhani", sans-serif;
+.customer__list{
+        padding : 4em 0 0 1em;
+        .customer__item {
+                list-style-type: disc;
+                padding: 0.2em 1em;
+          
+            &:hover{
+                  background: #888;
+                  color: lighten($color: #fff, $amount: 20)
+            }
+        }
+        // Extra small devices (portrait phones, less than 576px)
+        // No media query since this is the default in Bootstrap
 
-  &:hover {
-    background: #fff;
-    color: #777;
-  }
+        // Small devices (landscape phones, 576px and up)
+          @media (min-width: 576px) {
+                .customer__item {
+                  width: 25%;
+                }
+          }
+
+          // Medium devices (tablets, 768px and up)
+          @media (min-width: 768px) {
+                .customer__item {
+                  width: 50%;
+                }
+          }
+
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) {
+                .customer__item {
+                  width: 100%;
+                }
+          }
+
+          // Extra large devices (large desktops, 1200px and up)
+          @media (min-width: 1200px) {
+              .customer__list--item {
+                width: 50%;
+              }
+          }
 }
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .customer__item {
-    width: 25%;
-  }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .customer__item {
-    width: 50%;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .customer__item {
-    width: 50%;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .customer__list--item {
-    width: 50%;
-  }
-}
+  

@@ -1,33 +1,37 @@
-<section class="main__header">
-  <header class="top__header">
-    <nav class="navbar__nav" role="navigation">
-      <ul role="menubar" class="navbar__nav--menubar">
-        <li class="navbar__nav--items" role="menuitem">
-          <a href="#" class="nav__item--selected nav__item--selectedlogo">
-            <img src='../../../../assets/images/icons-user.ico' role="img" aria-label="user-icon"
-              class="Customer__logo" />Customer Manager</a>
-        </li>
-        <li class="navbar__nav--items" role="menuitem">
-          <a routerLink="customers" routerLinkActive="active-route" class='nav__item--selected nav__item--selectedbar'>
-            Customer
-          </a>
-        </li>
-        <li class="navbar__nav--items" role="menuitem">
-          <a routerLink="orders" routerLinkActive="active-route" class='nav__item--selected nav__item--selectedbar'>
-            orders
-          </a>
-        </li>
-        <li class="navbar__nav--items" role="menuitem">
-          <a routerLink="about" routerLinkActive="active-route" class='nav__item--selected nav__item--selectedbar'>
-            About
-          </a>
-        </li>
-        <li class="navbar__nav--items" role="menuitem">
-          <a routerLink="login" routerLinkActive="active-route" class='nav__item--selected nav__item--selectedbar'>
-            login
-          </a>
-        </li>
-      </ul>
+<header class="page__header header">
+    <nav class="header__navbar" role="navigation">
+        <ul role="menubar" class="menu">
+            <li class="menu__item" role="menuitem">
+                <a href="#" class="menu__link menu__link--logo">
+                    <img src='../../../../assets/images/icons-user.ico' role="img" aria-label="user-icon"
+                     alt="COMS LOGO"   class="menu__link__logo" />
+                    Customer Manager
+                </a>
+            </li>
+            <li class="menu__item" role="menuitem">
+                <a routerLink="customers" routerLinkActive="active-route"
+                    class='menu__link menu__link--selectedbar'>
+                    Customer
+                </a>
+            </li>
+            <li class="menu__item" role="menuitem">
+                <a routerLink="orders" routerLinkActive="active-route"
+                    class='menu__link menu__link--selectedbar'>
+                    orders
+                </a>
+            </li>
+            <li class="menu__item" role="menuitem">
+                <a routerLink="about" routerLinkActive="active-route"
+                    class='menu__link menu__link--selectedbar'>
+                    About
+                </a>
+            </li>
+            <li class="menu__item" role="menuitem">
+                <a routerLink="login" routerLinkActive="active-route"
+                    class='menu__link menu__link--selectedbar'>
+                    login
+                </a>
+            </li>
+        </ul>
     </nav>
-  </header>
-</section>
+</header>

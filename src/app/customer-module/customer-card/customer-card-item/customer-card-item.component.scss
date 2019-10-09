@@ -1,51 +1,57 @@
-@import "../../../common/mixins/mixins.scss";
-.card__module {
-  background-color: #f1f1f1;
-  width: 100%;
-  margin-bottom: 1em;
-  @include prefix(box-shadow, 0 3px 6px rgba(0, 0, 0, 0.16), ms webkit moz o)
-    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);;
+@import '../../../common/mixins.scss';
+@import '../../../common/variables.scss';
+.customer__card {
+            background-color: #f1f1f1;
+            width: 100%;
+            margin-bottom: 1em;
+            @include prefix(box-shadow, 0 1px 6px rgba(0, 0, 0, 0.16),ms webkit moz o);
+            transition: $transition;
+            &:hover{
+                  @include prefix(box-shadow, 0 3px 6px rgba(0, 0, 0, 0.16),ms webkit moz o);
+            }
+            .card__title {
+                  font-family: 'Rajdhani', sans-serif;
+                  margin: 0px;
+                  background-color: #5656f0;
+                  color: #fff;
+                  position: relative;
+                  line-height: 2em;
+                  padding: 0 0.8em;
+                  font-size: 1.4em;
+      
+                  .card__edit{
+                        position: absolute;
+                        right:0.5em;
+                  }
+            }
+            .card__body {
+                  display: flex;
+                  flex-wrap: nowrap;
+                  .card__image {
+                        margin: 10px;
+                  }
+                  .card__info {
+                        font-size: 1.3em;
+                        font-family: 'Rajdhani', sans-serif;
+                        font-weight: 700;
+                        a {
+                            margin-top: 0.5em;
+                        }
+                  }
+                  .card__details {
+                        padding-top: 1em;
+                  }
+                  .view-order {
+                        text-decoration: none;
+                  }
+            }
+            
 }
 
-.card__title {
-  font-family: "Rajdhani", sans-serif;
-  margin: 0px;
-  background-color: #5656f0;
-  color: #fff;
-  position: relative;
-  line-height: 2em;
-  padding: 0 0.8em;
-  font-size: 1.4em;
 
-  .card__edit {
-    position: absolute;
-    right: 0.5em;
-  }
-}
 
-.card__body {
-  display: flex;
-  flex-wrap: nowrap;
 
-  .card__image {
-    margin: 10px;
-  }
 
-  .card__info {
-    font-size: 1.3em;
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 700;
 
-    a {
-      margin-top: 0.5em;
-    }
-  }
 
-  .card__details {
-    padding-top: 1em;
-  }
-}
 
-.view-order {
-  text-decoration: none;
-}

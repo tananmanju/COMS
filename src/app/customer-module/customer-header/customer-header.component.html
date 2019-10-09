@@ -1,40 +1,40 @@
-<header class="top__header">
-  <section class="section__first">
+<header class="customer__header">
+  
+  <section class="customer__header--top">
     <h2 class='top__header--heading'>
       <img src="../../../assets/images/customer.png" alt="user-icon" role="img" aria-label="user-icon"
         class="user__icon--img" />
       Customers</h2>
   </section>
-  <section class="section__second">
-    <nav role="navigation" class="menubar">
-      <ul role="menubar" class="nav navbar__nav">
-        <li role="menuitem" class="navbar__nav--item">
-          <a routerLink='card-view' routerLinkActive="active-child-route" class="navbar__item--title">
-            <i class="fa fa-th icon__grid" aria-hidden="true"></i>Card View
+
+  <section class="customer__header--bottom">
+    <nav role="navigation" class="navbar">
+      <ul role="menubar" class="menubar">
+        <li role="menuitem" class="menubar__item">
+          <a routerLink='card-view' routerLinkActive="active-child-route" class="menubar__link">
+            <i class="fa fa-th menubar__icon" aria-hidden="true"></i>Card View
           </a>
         </li>
-        <li role="menuitem" class="navbar__item">
-          <a routerLink='list-view' routerLinkActive="active-child-route" class="navbar__item--title">
-            <i class='fa fa-list icon__grid' aria-hidden="true"></i>Card List
+        <li role="menuitem" class="menubar__item">
+          <a routerLink='list-view' routerLinkActive="active-child-route" class="menubar__link">
+            <i class='fa fa-list menubar__icon' aria-hidden="true"></i>Card List
           </a>
         </li>
-        <li role="menuitem" class="navbar__item">
-          <a routerLink='table-view' routerLinkActive="active-child-route" class="navbar__item--title"><i
-              class='fa fa-table icon__grid' aria-hidden="true"></i>Table View
+        <li role="menuitem" class="menubar__item">
+          <a routerLink='table-view' routerLinkActive="active-child-route" class="menubar__link"><i
+              class='fa fa-table menubar__icon' aria-hidden="true"></i>Table View
           </a>
         </li>
-        <li role="menuitem" class="navbar__item">
-          <a routerLink="new-customer" routerLinkActive="active-child-route" class="navbar__item--title">
-            <i class='fa fa-plus icon__grid' aria-hidden="true"></i>New Customer
+        <li role="menuitem" class="menubar__item">
+          <a routerLink="new-customer" routerLinkActive="active-child-route" class="menubar__link">
+            <i class='fa fa-plus menubar__icon' aria-hidden="true"></i>New Customer
           </a>
         </li>
-      </ul>
-      <ul class="nav navbar__nav navbar__right">
-        <li class="customer__filter">
-          <label for='customer-list-filter'><strong>Filter</strong></label>
-          <input type='text' id='customer-list-filter' name='customer-list-filter' class='customer__list--filter'>
+        <li class="menubar__item customer__filter">
+            <label for='customer-list-filter'><strong>Filter</strong></label>
+            <input type='text' id='customer-list-filter' name='customer-list-filter' class='customer__list--filter'>
         </li>
-      </ul>
+    </ul>
     </nav>
   </section>
 </header>

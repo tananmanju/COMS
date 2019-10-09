@@ -1,18 +1,7 @@
     <section class="customer__list-view">
-      <ul class="customer__list">
-        <li *ngFor="let customer of customers" class="customer__item">
-          <h3>Customer Id: {{customer.id}}</h3>
-          <p>Customer Name: {{customer.firstName}} {{customer.lastName}}</p>
-          <p>Customer Email: {{customer.email}}</p>
-          <p>Customer Phone: {{customer.phone}}</p>
-          <p>Gender: {{customer.gender}}</p>
-          <address>
-            <span>House No: {{customer.address.houseNo}} </span>
-            <span>Street: {{customer.address.street}} </span>
-            <span>Society: {{customer.address.society}} </span>
-            <span>City: {{customer.address.city}} </span>
-
-          </address>
-        </li>
-      </ul>
+        <ul class="customer__list">
+            <li *ngFor="let customer of customers" class="customer__item">
+                  {{customer.firstName}} {{customer.lastName}}
+            </li>
+        </ul>
     </section>

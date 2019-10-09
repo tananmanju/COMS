@@ -68,7 +68,28 @@ server.get("/api/orders", function (req, res) {
   res.status(200).sendFile(ordersDataFile);
 });
 
-//enable port
+
+//read all order data according to order id 
+server.get('/api/orders/:orderId', function (req, res) {
+  console.log(req.params);
+  res.status(200).send(order.filter(item => item.orderId == req.params.orderId));
+});
+//read order according to Payment Status 
+server.get('/api/orders/payStatus/:status', function (req, res) {
+  console.log(req.params);
+  res.status(200).send(order.filter(item => item.payStatus == req.params.status));
+});
+
+
+
+//read order according to Fulfillment Status 
+server.get('/api/orders/fulfillStatus/:status', function (req, res) {
+  console.log(req.params);
+  res.status(200).send(order.filter(item =>  (item.fulfillStatus).toString() == req.params.status));
+});
+
 const PORT = 5000;
+
 server.listen(PORT, () => {
+  console.log(`API Server is ready on port ${PORT}`);
 });

@@ -1,11 +1,122 @@
-[
-  {
-    "id": 1001,
-    "firstName": "Puja",
-    "lastName": "Gope",
-    "email": "Pujarani@gmail.com",
-    "phone": "7838239489",
+[{
+    "id": 1000,
+    "firstName": "Veena",
+    "lastName": "Mayank",
+    "email": "Veena@gmail.com",
+    "phone": "7598001207",
     "gender": "F",
+    "address": {
+      "houseNo": "Apt. 645",
+      "street": "Ram Nagar",
+      "society": "Saptagiri Homes",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1002,
+    "firstName": "Ankit",
+    "lastName": "Talpade",
+    "email": "ankit@bbc.com",
+    "phone": "8878489304",
+    "gender": "M",
+    "address": {
+      "houseNo": "Apt. 978",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1003,
+    "firstName": "Isha",
+    "lastName": "Guha",
+    "email": "isha@gmail.com",
+    "phone": "9827472937",
+    "gender": "F",
+    "address": {
+      "houseNo": "Apt. 88B",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1004,
+    "firstName": "Monika",
+    "lastName": "Kumar",
+    "email": "Monika@gmail.com",
+    "phone": "9279848938",
+    "gender": "F",
+    "address": {
+      "houseNo": "Apt. 89C",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1005,
+    "firstName": "Roshan",
+    "lastName": "Lokhande",
+    "email": "Roshan@gmail.com",
+    "phone": "9176840174",
+    "gender": "M",
+    "address": {
+      "houseNo": "Apt. 98C",
+      "street": "Prestige White",
+      "society": "Rawilay Vihar",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1006,
+    "firstName": "Denesh",
+    "lastName": "Ramdeen",
+    "email": "Denesh@gmail.com",
+    "phone": "9184053890",
+    "gender": "M",
+    "address": {
+      "houseNo": "Apt. 674",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1007,
+    "firstName": "Mahima",
+    "lastName": "Rana",
+    "email": "Mahima@gmail.com",
+    "phone": "9245890654",
+    "gender": "F",
+    "address": {
+      "houseNo": "Apt. 774",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "id": 1008,
+    "firstName": "Deepak",
+    "lastName": "Ahuja",
+    "email": "Deepak1@gmail.com",
+    "phone": "9969187655",
+    "gender": "M",
     "address": {
       "houseNo": "Apt. 557",
       "street": "Patel Nagar",
@@ -16,163 +127,35 @@
     }
   },
   {
-    "id": 1002,
-    "firstName": "Priya",
-    "lastName": "Sinha",
-    "email": "priyasinha@gmail.com",
-    "phone": "7638239485",
-    "gender": "F",
-    "address": {
-      "houseNo": "Apt.441",
-      "street": "Tarapur",
-      "society": "Palam Vihar",
-      "city": "Munger",
-      "state": "Bihar",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1003,
-    "firstName": "Shubham",
-    "lastName": "Sinha",
-    "email": "shubamsinha@gmail.com",
-    "phone": "9838239467",
-    "gender": "M",
-    "address": {
-      "houseNo": "Apt.120",
-      "street": "Kulas Light",
-      "society": "Udyog Vihar",
-      "city": "Patna",
-      "state": "Bihar",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1004,
-    "firstName": "Preeti",
-    "lastName": "Sinha",
-    "email": "preeti12@gmail.com",
-    "phone": "9438239485",
-    "gender": "F",
-    "address": {
-      "houseNo": "Apt.340",
-      "street": "MohanGanj",
-      "society": "Mohan Vihar",
-      "city": "Patna",
-      "state": "Bihar",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1005,
-    "firstName": "Rahul",
-    "lastName": "singh",
-    "email": "rahulsingh@gmail.com",
-    "phone": "0838239485",
-    "gender": "M",
-    "address": {
-      "houseNo": "Apt.989",
-      "street": "kali Mandir",
-      "society": "Nirman Vihar",
-      "city": "Delhi",
-      "state": "Delhi",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1006,
-    "firstName": "Ravi",
-    "lastName": "singh",
-    "email": "ravisingh@gmail.com",
-    "phone": "9538239485",
-    "gender": "M",
-    "address": {
-      "houseNo": "Apt.390",
-      "street": "Ashok Nagar",
-      "society": "Ashok Vihar",
-      "city": "Delhi",
-      "state": "Delhi",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1007,
-    "firstName": "Pankaj",
-    "lastName": "Mishra",
-    "email": "pankajmishra@gmail.com",
-    "phone": "08938239485",
-    "gender": "M",
-    "address": {
-      "houseNo": "Apt.189",
-      "street": "sai Nagar",
-      "society": "Sarada Vihar",
-      "city": "Gurgaon",
-      "state": "Haryana",
-      "country": "India"
-    }
-  },
-  {
-    "id": 1008,
-    "firstName": "Rekha",
-    "lastName": "singh",
-    "email": "rekhasingh@gmail.com",
-    "phone": "9038239485",
-    "gender": "F",
-    "address": {
-      "houseNo": "Apt.760",
-      "street": "Police Line",
-      "society": "Patel Nagar",
-      "city": "Gurgaon",
-      "state": "Haryana",
-      "country": "India"
-    }
-  },
-  {
     "id": 1009,
-    "firstName": "Monika",
-    "lastName": "yadav",
-    "email": "monikayadav@gmail.com",
-    "phone": "9638239485",
-    "gender": "F",
+    "firstName": "Pulkit",
+    "lastName": "Kasyap",
+    "email": "Pulkit@gmail.com",
+    "phone": "8895091899",
+    "gender": "M",
     "address": {
-      "houseNo": "Apt.459",
-      "street": "Durga Mandir",
-      "society": "Durga Vihar",
-      "city": "Bhagalpur",
-      "state": "Bihar",
+      "houseNo": "Apt. 875",
+      "street": "Patel Nagar",
+      "society": "Rawilay Vihar",
+      "city": "Gurgaon",
+      "state": "Haryana",
       "country": "India"
     }
   },
   {
     "id": 1010,
-    "firstName": "Shona",
-    "lastName": "Bhagat",
-    "email": "shonabhagat@gmail.com",
-    "phone": "9638239485",
-    "gender": "F",
+    "firstName": "Dikawela",
+    "lastName": "kulkarni",
+    "email": "Dikawela@gmail.com",
+    "phone": "9910789238",
+    "gender": "M",
     "address": {
-      "houseNo": "Apt.345",
-      "street": "Mohanganj Vihar",
-      "society": "Mohana Vihar",
-      "city": "Ranchi",
-      "state": "Jharkhand",
+      "houseNo": "Apt. 129",
+      "street": "Mantri Alypne",
+      "society": "Mantri Alypne",
+      "city": "Bangalore",
+      "state": "Karnataka",
       "country": "India"
     }
-  },
-  {
-    "firstName": "Clark",
-    "lastName": "Kent",
-    "gender": "M",
-    "email": "clark@jl.com",
-    "phone": "123123131",
-    "address": {
-      "houseNo": "123",
-      "street": "Daily Planet",
-      "society": "Metropolis",
-      "city": "Hillsboro",
-      "state": "Oregon",
-      "country": "US"
-    },
-    "id": 1011
   }
 ]

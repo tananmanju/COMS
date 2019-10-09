@@ -1,56 +1,48 @@
 /*customer card scss starts*/
 .customer__container {
-  margin: 0 auto;
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          font-family:sans-serif serif;
+          
+          .customer__list{
+                  width:25%;
+                  margin : 10px;
+          }
+          
+          @media (min-width: 576px) {
+                  .customer__item {
+                    width: 25%;
+                  }
+          }
+          
+          // Medium devices (tablets, 768px and up)
+          @media (min-width: 768px) {
+                  .customer__item {
+                    width: 50%;
+                  }
+          }
+          
+          // Large devices (desktops, 992px and up)
+          @media (min-width: 992px) {
+                    .customer__item {
+                      width: 50%;
+                    }
+          }
+          
+          // Extra large devices (large desktops, 1200px and up)
+          @media (min-width: 1200px) {
+                    .customer__list {
+                      display: flex;
+                      flex-wrap: wrap;
+                      font-family: sans-serif;
+                      .customer__item {
+                              width: 33%;
+                      }
+                    }
+          }
+          
 }
-
-.customer__list {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  list-style: none;
-  font-family: sans-serif serif;
-}
-
-.customer__item {
-  padding: 0.3em;
-  width: 100%;
-}
-
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .customer__item {
-    width: 25%;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .customer__item {
-    width: 50%;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .customer__item {
-    width: 50%;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .customer__list {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: sans-serif;
-  }
-
-  .customer__item {
-    width: 33%;
-  }
-}
-
 /*customer card scss ends*/
+

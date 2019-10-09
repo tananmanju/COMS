@@ -1,52 +1,51 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-.main__header {
-  width: 90%;
-  margin: 0 auto;
-  font-family: sans-serif;
-}
-.navbar__nav {
-  height: 80px;
-  background-color: #5656f0;
-  float: none;
-  margin: 0;
-  overflow: hidden;
-}
-.navbar__nav--menubar {
-  margin: 2px 0;
-  padding: 0;
-}
-.Customer__logo {
-  width: 70px;
-  float: left;
-  position: relative;
-  margin: 0px 11px 0px 13px;
-}
+@import '../common/variables.scss';
+@import '../common/mixins.scss';
+.header{
+  &__navbar {
+        height: 80px;
+        background-color: #5656f0;
+        float: none;
+        margin: 0;
+        overflow: hidden;
+  }
+  .menu {
+        margin: 2px 0;
+        padding: 0;
+        
+        &__item{
+              display: inline-block;
+              list-style-type: none;
+              &:hover{
+                .menu__link{
+                  color: darken($color: #333, $amount: 5);
+                }
+              }
+          }
+        &__link{
+              font-size: 1.4em;
+              color: #fff;
+              display: block;
+              line-height: 2.5em;
+              padding: 0em 1.6em;
+              text-decoration: none;
+              text-transform: capitalize;
+              font-weight: 600;
+              transition: $transition;
+                &__logo {
+                  width: 70px;
+                  float: left;
+                  position: relative;
+                  margin: 0px 11px 0px 13px;
+                }
 
-.navbar__nav--items {
-  display: inline-block;
-  list-style-type: none;
-}
-.nav__item--selected {
-  font-size: 1.4em;
-  color: #fff;
-  display: block;
-  line-height: 2.5em;
-  padding: 0em 1.6em;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-weight: 600;
-}
-.nav__item--selectedlogo {
-  font-size: 1.6em;
-  font-weight: 700;
-}
-.nav__item--selectedbar.active-route {
-  line-height: 1.9em;
-  margin: 16px 1px;
-  background-color: #fff;
-  color: #333;
-  border-radius: 4px;
-}
+                &--selectedbar.active-route{
+                  line-height: 1.9em;
+                  margin: 16px 1px;
+                  background-color: #fff;
+                  color: #333;
+                  border-radius: 4px;
+                
+                }
+        }
+    }
+  }

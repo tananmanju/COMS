@@ -1,29 +1,134 @@
+<header class="order-header">
+	<h2 class="order-title">Orders</h2>
+	<nav class="meun" role="navigation">
+		<ul class="menu-list">
+			<li class="menu-item active" (click)='allList()'>
+				<a>All</a>
+			</li>
+			<li class="menu-item" (click)='paidList()'>
+				<a>Paid</a>
+			</li>
+			<li class="menu-item" (click)='unpaidList()'>
+				<a>Unpaid</a>
+			</li>
+			<li class="menu-item" (click)='pendingList()'>
+				<a>Pending</a>
+			</li>
+			<li class="menu-item" (click)='fulfillList()'>
+				<a>Fulfill</a>
+			</li>
+			<li class="menu-item" (click)='unfulfillList()'>
+				<a>Unfulfill</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<table class="order-list">
+		<thead>
+			<tr class="list-heading">
+				<th>Orders</th>
+				<th>Date</th>
+				<th>Customer Id</th>
+				<th>Payment Status</th>
+				<th>Fulfillment Status</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody class="table-body">
+			<tr class="list-item" *ngFor="let order of orders; let i =index;">
+				<td class="item">{{order.orderId}}</td>
+				<td class="item">{{order.orderDate}}</td>
+				<td class="item">{{order.customerId}}</td>
+				<td class="item"><span class="btn {{order.payStatus}}">{{order.payStatus | uppercase}}</span></td>
+				<td class="item">
+					<span *ngIf="order.fulfillStatus; else elseBlock" class="btn fulfill">Fulfilled</span>
+					<ng-template #elseBlock>
+						<span class="btn unfulfill">Unfulfilled</span>
+					</ng-template>
+				</td>
+				<td class="item">&#8377;
+					<!-- {{totalprice}} -->
+					{{order.products[0].orderPrice}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+
+
+
+
+
+<!--///////////////////////////////////-->
+<!-- <header class="header-head">
+  <h2>
+      {{title}}
+  </h2>
+  <nav>
+      <ul>
+        <li class="order-status">
+            <a class="order-status-active" (click)='function1()'><span>All Orders</span></a>
+        </li>
+        <li class="order-status">
+          	<a class="order-status" (click)='function2()'><span>Paid</span></a>
+        </li>
+        <li class="order-status">
+            <a class="order-status"><span>Unpaid</span></a>
+        </li>
+        <li class="order-status">
+            <a class="order-status"><span>Fullfilled</span></a>
+        </li>
+        <li class="order-status">
+            <a class="order-status"><span>Unfullfilled</span></a>
+        </li>
+      </ul>
+      
+		
+			
+			
+			
+  </nav>
 <section class="order-main">
   <table class="order__table" cellspacing="0">
     <thead class="table__head">
-      <tr class="table__row--head">
-        <th class="table__head--item">Order Id</th>
-        <th class="table__head--item">Customer Id</th>
-        <th class="table__head--item">Date</th>
-        <th class="table__head--item">Pay Status</th>
-        <th class="table__head--item">FullFill Status</th>
-        <th class="table__head--item">Total</th>
-      </tr>
+        <tr class="table__row--head">
+            <th class="table__head--item">Order Id</th>
+            <th class="table__head--item">Customer Id</th>
+            <th class="table__head--item">Date</th>
+            <th class="table__head--item">Pay Status</th>
+            <th class="table__head--item">FullFill Status</th>
+            <th class="table__head--item">Total</th>
+        </tr>
     </thead>
     <tbody>
       <tr *ngFor='let order of orders' class="table__row--item">
-        <td class="table__item">{{order.orderId}}</td>
-        <td class="table__item">{{order.customerId}}</td>
-        <td class="table__item">{{order.orderDate}}</td>
-        <td class="table__item"><span
-            [ngClass]="{'result__type': order.payStatus === 'paid', 'result__type--warning': order.payStatus === 'Pending', 'result__type--general':  order.payStatus === 'unpaid' }">
-            {{order.payStatus}}</span>
-        </td>
-        <td class="table__item"><span
-            [ngClass]="{'result__type': order.fulfillStatus, 'result__type--general': order.fulfillStatus === false}">{{order.fulfillStatus}}</span>
-        </td>
-        <td class="table__item">{{321}}</td>
-      </tr>
+        <div class="testing" *ngIf="order.payStatus === 'paid'">
+            <td class="table__item">{{order.orderId}}</td>
+            <td class="table__item">{{order.customerId}}</td>
+            <td class="table__item">{{order.orderDate}}</td>
+            <td class="table__item"><span  [ngClass]="{'result__type': order.payStatus === 'paid', 'result__type--warning': order.payStatus === 'Pending', 'result__type--general':  order.payStatus === 'unpaid' }"> {{order.payStatus | titlecase}}</span></td>
+            <td class="table__item"><span [ngClass]="{'result__type': order.fulfillStatus, 'result__type--general': order.fulfillStatus === 'notfulfilled'}">{{order.fulfillStatus}}</span></td>
+            <td class="table__item">{{order.products[0].orderPrice + order.products[1].orderPrice + order.products[2].orderPrice}}</td>
+        </div>
+       </tr>
     </tbody>
   </table>
-</section>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
